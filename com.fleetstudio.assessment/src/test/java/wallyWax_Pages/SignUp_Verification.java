@@ -4,8 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -16,7 +16,7 @@ public class SignUp_Verification {
     private Signup_Page_Actions objFunctionality;
 
     @SuppressWarnings("deprecation")
-	@BeforeTest
+	@BeforeSuite
     public void beforetest() {
         //WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
@@ -53,7 +53,7 @@ public class SignUp_Verification {
     	objFunctionality.Signupsuccessful();
     }
 
-    @AfterTest
+    @AfterSuite
     public void close() throws InterruptedException {
         Thread.sleep(5000);
         driver.quit();

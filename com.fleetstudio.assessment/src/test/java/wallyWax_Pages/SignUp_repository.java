@@ -16,7 +16,8 @@ public class SignUp_repository {
 	protected By LastNamme = By.name("lastName");
 	protected By Email 	 = By.id("email");
 	protected By Phone = By.xpath("//body/div[@id='__next']/div[1]/main[1]/div[2]/div[1]/div[1]/form[1]/fieldset[4]/div[2]/input[1]");
-	protected By Role  = By.xpath("//select[@id='role']");
+	protected By Role  = By.id("role");
+	protected By CEO   = By.xpath("//option[contains(text(),'CEO')]");
 	protected By Company = By.id("organization");
 	protected By Freelancer = By.xpath("//input[@id='freelancer']");
 	protected By WebsiteNum = By.id("large");

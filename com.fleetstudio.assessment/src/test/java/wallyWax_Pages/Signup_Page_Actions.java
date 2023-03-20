@@ -42,9 +42,12 @@ public class Signup_Page_Actions extends SignUp_repository{
 		driver.findElement(Phone).click();
 		driver.findElement(Phone).sendKeys("1234567890");	
 	}
-	public void SelectingRoleDropDown() {
+	public void SelectingRoleDropDown() throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("arguments[0].scrollIntoView()", Role);
+		Thread.sleep(2000);
+//		driver.findElement(Role).click();
+//		driver.findElement(CEO).click();
 		Select Position = new Select(driver.findElement(Role));
 		Position.selectByValue("CEO");
 		
